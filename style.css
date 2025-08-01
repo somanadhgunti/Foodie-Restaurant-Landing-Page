@@ -398,6 +398,7 @@ li{
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 #form h3{
     text-align: center;
@@ -430,7 +431,7 @@ form div input{
     position: relative;
     left: 34%;
     height: 105px;
-    width: 480px;
+        width: 603px;
 }
 #btn{
       text-transform: uppercase;
@@ -482,4 +483,142 @@ form div input{
 }
 #fd{
   margin-left: 50px;
+}
+/* Container styling */
+.booking-form-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+/* Form title */
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  animation: slideDown 0.7s ease forwards;
+}
+
+/* Labels */
+.booking-form label {
+  display: block;
+  margin: 14px 0 6px 0;
+  font-weight: 600;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+/* Input and select styling */
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Focus effect */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+}
+
+/* Button styling */
+.booking-form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(53, 122, 189, 0.6);
+}
+
+
+.booking-form button:hover {
+  background: linear-gradient(135deg, #357ABD, #4a90e2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(53, 122, 189, 0.8);
+}
+.booking-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(53, 122, 189, 0.6);
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reservation-link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4a90e2;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.reservation-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #357ABD;
+  transition: width 0.35s ease;
+  border-radius: 2px;
+}
+
+.reservation-link:hover {
+  color: #357ABD;
+}
+
+.reservation-link:hover::after {
+  width: 100%;
 }
